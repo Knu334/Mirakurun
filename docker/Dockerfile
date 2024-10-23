@@ -1,16 +1,16 @@
 ARG ARCH=
-FROM ${ARCH}node:18.15.0-buster AS build
+FROM ${ARCH}node:22.10.0-bookworm AS build
 WORKDIR /app
 ENV DOCKER=YES NODE_ENV=production
 ADD . .
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y --no-install-recommends build-essential && \
-    npm install --production=false && \
+    npm install --include=dev && \
     npm run build && \
-    npm install -g --unsafe-perm --production
+    npm install -g --unsafe-perm --omit=dev
 
-FROM ${ARCH}node:18.15.0-buster-slim
+FROM ${ARCH}node:22.10.0-bookworm-slim
 WORKDIR /app
 RUN apt-get update && \
     apt-get upgrade -y && \
