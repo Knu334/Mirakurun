@@ -17,12 +17,11 @@ import { Operation } from "express-openapi";
 import * as api from "../api";
 import { Version } from "../../../api";
 import { getLatestVersion } from "../system";
-const pkg = require("../../../package.json");
 
 export const get: Operation = async (req, res) => {
 
     const version: Version = {
-        current: pkg.version,
+        current: '3.9.0-rc.4',
         latest: getLatestVersion()
     };
 
