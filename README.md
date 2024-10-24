@@ -1,5 +1,9 @@
 [![Mirakurun](https://gist.githubusercontent.com/kanreisa/0ab27d7771e97edce5a24cc81b9b8ce6/raw/e50683f1c4e7d1a13e9ef468f8cc945b0dbc853c/logo-mirakurun.svg)](https://github.com/Chinachu/Mirakurun)
 
+> [!IMPORTANT]  
+> **This Fork is designed to update various libraries and Node.js versions.**  
+> **Many features have not been tested and are not recommended for use.**
+
 # Mirakurun
 
 DVR Tuner Server for Japanese TV which designed for the "Air" (in development codename).
