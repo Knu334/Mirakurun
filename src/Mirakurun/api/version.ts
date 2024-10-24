@@ -21,7 +21,7 @@ import { getLatestVersion } from "../system";
 export const get: Operation = async (req, res) => {
 
     const version: Version = {
-        current: '3.9.0-rc.4',
+        current: "3.9.0-rc.4",
         latest: getLatestVersion()
     };
 
