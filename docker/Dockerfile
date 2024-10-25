@@ -3,7 +3,7 @@ FROM ${ARCH}node:22.10.0-bookworm AS build
 WORKDIR /app
 ENV DOCKER=YES NODE_ENV=production
 ADD . .
-RUN apt-get update && \
+RUN apt-get update
     apt-get upgrade -y && \
     apt-get install -y --no-install-recommends build-essential && \
     npm install --include=dev && \
